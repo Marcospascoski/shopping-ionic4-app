@@ -1,0 +1,76 @@
+<!-- <ion-tabs>
+
+    <ion-tab label="Home" icon="sunny" href="/tabs/(products:products)">
+    	<ion-router-outlet name="products"></ion-router-outlet>
+    </ion-tab>
+    <ion-tab label="Favourites" icon="sunny" href="/tabs/(favourites:favourites)">
+    	<ion-router-outlet name="favourites"></ion-router-outlet>
+    </ion-tab>
+    <ion-tab label="Cart" icon="sunny" href="/tabs/(cart:cart)">
+    	<ion-router-outlet name="cart"></ion-router-outlet>
+    </ion-tab>
+
+</ion-tabs> -->
+
+
+<!-- <ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" href="/tabs/(products:products)">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Products</ion-label>
+      <ion-router-outlet name="products"></ion-router-outlet>
+    </ion-tab-button>
+
+    <ion-tab-button tab="heart" href="/tabs/(favourites:favourites)">
+      <ion-icon name="heart"></ion-icon>
+      <ion-label>Favourites</ion-label>
+      <ion-router-outlet name="favourites"></ion-router-outlet>
+    </ion-tab-button>
+
+    <ion-tab-button tab="cart" href="/tabs/(cart:cart)">
+      <ion-icon name="cart"></ion-icon>
+      <ion-label>Cart</ion-label>
+      <ion-router-outlet name="cart"></ion-router-outlet>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs> -->
+
+
+
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" href="/tabs/(products:products)">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="heart" href="/tabs/(favourites:favourites)">
+      <ion-icon name="heart"></ion-icon>
+      <ion-label>Favourites</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="cart" href="/tabs/(cart:cart)">
+      <ion-icon name="cart"></ion-icon>
+      <ion-label>Cart</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+  <ion-tab tab="home">
+    <ion-router-outlet name="products"></ion-router-outlet>
+  </ion-tab>
+
+  <ion-tab tab="heart">
+    <ion-router-outlet name="favourites"></ion-router-outlet>
+  </ion-tab>
+
+  <ion-tab tab="cart">
+    <ion-router-outlet name="cart"></ion-router-outlet>
+  </ion-tab>
+
+</ion-tabs>
+
