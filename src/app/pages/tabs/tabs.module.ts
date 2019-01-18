@@ -17,7 +17,7 @@ import { TabsRoutingModule } from './tabs-routing.module';
     TabsRoutingModule,
     ProductsPageModule,
     CartPageModule,
-    FavouritesPageModule
+    FavouritesPageModule,
   ],
   declarations: [TabsPage]
 })

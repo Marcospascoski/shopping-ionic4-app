@@ -5,6 +5,7 @@ import { Product } from './product'
 import { ProductsService } from '../services/products.service';
 import { FavouritesService   } from '../services/favourites.service';
 import { CartService } from '../services/cart.service'
+import { SortPipe } from './sort.pipe';
 
 @Component({
   selector: 'app-products',

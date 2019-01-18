@@ -7,6 +7,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
@@ -16,12 +17,13 @@ import { ProductsService } from './pages/services/products.service';
 import { FavouritesService } from './pages/services/favourites.service';
 import { CartService } from './pages/services/cart.service';
 import { AuthService } from './pages/services/auth.service';
+import { SortPipe } from './pages/products/sort.pipe';
 
 import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
-  	AppComponent,
+  	AppComponent
   	],
   entryComponents: [
   ],
@@ -31,6 +33,7 @@ import { environment } from '../environments/environment';
   	AppRoutingModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase),
+    Ng2SearchPipeModule
   ],
   providers: [
     StatusBar,

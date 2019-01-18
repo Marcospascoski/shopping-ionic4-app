@@ -6,9 +6,20 @@
 
 <ion-content padding>
 
+  <ion-searchbar
+    [showCancelButton]="shouldShowCancel"
+    [(ngModel)]="term"
+    required>
+  </ion-searchbar>
+
+  <ion-button class="sort" clear item-end (click)="sort()">Sort by Price
+    <ion-icon style=" font-size: 25px;" name="arrow-round-up"></ion-icon>
+    <ion-icon style=" font-size: 25px;" name="arrow-round-down"></ion-icon>
+  </ion-button>
+
   <ion-list>
 
-  <ion-card *ngFor="let product of products">
+  <ion-card *ngFor="let product of products | filter:term | sort: {property: column, order: order}">
     <ion-img 
       [src]="product.imagePath"
       alt="{{ product.imagePath }}"></ion-img>
