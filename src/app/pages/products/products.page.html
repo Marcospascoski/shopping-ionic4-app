@@ -1,9 +1,34 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>products</ion-title>
+    <ion-title>Products</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-	<h2>hghgkjhlkjlkhkjhj</h2>
-</ion-content>
+
+  <ion-list>
+
+  <ion-card *ngFor="let product of products">
+    <ion-img 
+      [src]="product.imagePath"
+      alt="{{ product.imagePath }}"
+      class="img-responsive"></ion-img>
+    <ion-card-header>
+        <ion-card-title>{{ product.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <h2>{{ product.price }} UAH</h2>
+        <p>{{ product.description }}</p>
+    </ion-card-content>
+
+    <ion-button clear item-end (click)="addToFavourites(product)">
+        <ion-icon style=" font-size: 20px;" name="heart"></ion-icon>
+      </ion-button>
+      <ion-button clear item-end (click)="addToCart(product)">
+        <ion-icon style=" font-size: 20px;" name="cart"></ion-icon>
+      </ion-button>
+
+  </ion-card>
+
+</ion-list>
+

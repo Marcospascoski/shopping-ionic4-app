@@ -1,9 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cart</ion-title>
+    <ion-title>Cart</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
 
-</ion-content>
+  <ion-list>
+  <ion-item *ngFor="let product of cartProducts" class="col-md-4 item-product">
+    <ion-avatar slot="start">
+      <ion-img
+          [src]="product.imagePath"
+          alt="{{ product.imagePath }}"
+          class="img-responsive">
+        </ion-img>
+    </ion-avatar>
+    <ion-label>
+      <h2 (click)="showDetails(product)">{{ product.name }}</h2>
+      <h3 (click)="showDetails(product)">{{ product.price }} UAH</h3>
+      <p (click)="showDetails(product)">{{ product.description }}</p>
+    </ion-label>
+
+      <ion-button clear item-end (click)="onDeleteCart(product)">
+        <ion-icon style=" font-size: 25px;" name="trash"></ion-icon>
+      </ion-button>
+
+  </ion-item>
+</ion-list>
