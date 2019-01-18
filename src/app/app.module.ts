@@ -9,13 +9,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { ProductsService } from './pages/services/products.service';
 import { FavouritesService } from './pages/services/favourites.service';
 import { CartService } from './pages/services/cart.service';
+import { AuthService } from './pages/services/auth.service';
 
 import { environment } from '../environments/environment';
 
@@ -38,7 +38,8 @@ import { environment } from '../environments/environment';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ProductsService,
     FavouritesService,
-    CartService
+    CartService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

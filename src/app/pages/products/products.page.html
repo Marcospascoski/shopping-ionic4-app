@@ -11,8 +11,7 @@
   <ion-card *ngFor="let product of products">
     <ion-img 
       [src]="product.imagePath"
-      alt="{{ product.imagePath }}"
-      class="img-responsive"></ion-img>
+      alt="{{ product.imagePath }}"></ion-img>
     <ion-card-header>
         <ion-card-title>{{ product.name }}</ion-card-title>
     </ion-card-header>
@@ -21,14 +20,22 @@
         <p>{{ product.description }}</p>
     </ion-card-content>
 
-    <ion-button clear item-end (click)="addToFavourites(product)">
-        <ion-icon style=" font-size: 20px;" name="heart"></ion-icon>
-      </ion-button>
-      <ion-button clear item-end (click)="addToCart(product)">
-        <ion-icon style=" font-size: 20px;" name="cart"></ion-icon>
-      </ion-button>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button clear item-end (click)="addToFavourites(product)">
+            <ion-icon style=" font-size: 20px;" name="heart"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button clear item-end (click)="addToCart(product)">
+            <ion-icon style=" font-size: 20px;" name="cart"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-  </ion-card>
+</ion-card>
 
 </ion-list>
 
