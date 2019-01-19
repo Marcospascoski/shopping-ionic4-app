@@ -6,6 +6,7 @@ import { ProductsService } from '../services/products.service';
 import { FavouritesService   } from '../services/favourites.service';
 import { CartService } from '../services/cart.service'
 import { SortPipe } from './sort.pipe';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-products',
@@ -24,7 +25,8 @@ export class ProductsPage implements OnInit {
 
    constructor(private productsService: ProductsService,
                private favouritesService: FavouritesService,
-               private cartService: CartService) {}
+               private cartService: CartService,
+               private authService: AuthService) {}
 
   ngOnInit() {
     this.getProductList();
@@ -51,6 +53,11 @@ export class ProductsPage implements OnInit {
   sort(){
     this.descending = !this.descending;
     this.order = this.descending ? 1 : -1;
+  }
+
+  onLogout() {
+    this.authService.logout();
+    console.log('logout')
   }
 
 }
