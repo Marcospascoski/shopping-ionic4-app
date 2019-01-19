@@ -8,6 +8,8 @@ import { FavouritesPageModule } from '../favourites/favourites.module';
 import { CartPageModule } from '../cart/cart.module';
 import { TabsPage } from './tabs.page';
 import { TabsRoutingModule } from './tabs-routing.module';
+import { SigninPageModule } from '../signin/signin.module';
+import { SignupPageModule } from '../signup/signup.module';
 
 @NgModule({
   imports: [
@@ -17,7 +19,7 @@ import { TabsRoutingModule } from './tabs-routing.module';
     TabsRoutingModule,
     ProductsPageModule,
     CartPageModule,
-    FavouritesPageModule,
+    FavouritesPageModule
   ],
   declarations: [TabsPage]
 })

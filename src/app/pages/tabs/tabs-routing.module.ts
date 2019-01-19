@@ -6,6 +6,8 @@ import { TabsPage } from './tabs.page';
 import { ProductsPage } from '../products/products.page';
 import { FavouritesPage } from '../favourites/favourites.page';
 import { CartPage } from '../cart/cart.page';
+import { SigninPage } from '../signin/signin.page';
+import { SignupPage } from '../signup/signup.page';
 
 const routes: Routes = [
 	{
