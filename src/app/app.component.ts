@@ -23,10 +23,6 @@ export class AppComponent {
     icon: 'people'
   },
   {
-    title: 'Logout',
-    icon: 'log-out'
-  },
-  {
     title: 'Close',
     url: '',
     icon: 'close'

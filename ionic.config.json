@@ -1,5 +1,7 @@
 {
   "name": "shopping-ionic4-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
